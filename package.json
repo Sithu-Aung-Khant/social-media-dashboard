@@ -1,0 +1,25 @@
+{
+  "name": "social-media-dashboard-with-theme-switcher",
+  "version": "1.0.0",
+  "description": "This is my solution to the [Social media dashboard with theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "autoprefixer": "^10.4.16",
+    "browser-sync": "^2.29.3",
+    "cssnano": "^6.0.1",
+    "dart-sass": "^1.25.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "postcss": "^8.4.31"
+  }
+}
