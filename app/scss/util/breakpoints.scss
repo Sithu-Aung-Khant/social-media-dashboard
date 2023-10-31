@@ -1,14 +1,22 @@
-// 640px, 1024px, 1400px
+// 640px, 1024px(64em), 1400px
+// 640px, 950px(59.375em), 1400px 
+// 640px, 1150px, 1400px (current)
 $breakpoints-up: (
     'medium': '40em',
-    'large': '64em',
+    // 'large': '64em',
+    // 'large': '59.375em',
+    'large': '71.875em',
     'xlarge': '87.5em',
 );
 
-// 639px, 1023px, 1399px
+// 639px, 1023(63.9375em)px, 1399px
+// 639px, 949px(59.3125em), 1399px
+// 639px, 1149px(), 1399px (current)
 $breakpoints-down: (
     'small': '39.9375em',
-    'medium': '63.9375em',
+    // 'medium': '63.9375em',
+    // 'medium': '59.3125em',
+    'medium': '71.8125em',
     'large': '87.4375em', 
 );
 
