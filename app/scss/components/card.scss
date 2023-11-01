@@ -1,7 +1,21 @@
 @use '../util' as *;
 
+.cards {
+    display: grid;
+    background-color: gray;
+    grid-template-columns: 1fr;
+    gap: rem(30);
+    @include breakpoint(medium){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint(large){
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
 .card {
-    width: rem(255);
+    // width: rem(255);
     padding: rem(25);
     background-color: var(--dark-card-bg);
     color: var(--dark-text-1);
