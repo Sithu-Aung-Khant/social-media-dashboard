@@ -20,15 +20,15 @@
     position: relative;
     overflow: hidden;
     padding: rem(25);
-    background-color: var(--dark-card-bg);
-    color: var(--dark-text-1);
+    background-color: var(--card-bg);
+    color: var(--text-color1);
     text-align: center;
     border-radius: rem(5);
     transition: background 150ms ease-in-out;
     cursor: pointer;
 
     &:hover{
-        background: var(--dark-card-hover);
+        background: var(--card-hover);
         transition: background 150ms ease-in-out;
     }
     
@@ -52,7 +52,11 @@
             left: 0;
             width: 100%;
             height: rem(5);
-            background: linear-gradient(225deg, var(--instagram-end), var(--instagram-middle) 50.91%, var(--instagram-start) 100%);
+            background: linear-gradient(
+                225deg, 
+                var(--instagram-end), 
+                var(--instagram-middle) 50.91%, 
+                var(--instagram-start) 100%);
         }
     }
 
@@ -79,7 +83,7 @@
     }
 
         &__count{
-            color: var(--dark-text-2);
+            color: var(--text-color2);
             font-weight: 700;
             letter-spacing: rem(-2);
             line-height: 1;
@@ -93,7 +97,7 @@
         }
 
         &__label{
-            color: var(--dark-text-1);
+            color: var(--text-color1);
             font-weight: 400;
             font-size: rem(12);
             letter-spacing: rem(5);
@@ -108,18 +112,15 @@
         font-weight: 700;
 
         &--up{  
-            color: var(--lime-green);
+            color: var(--green);
         }
         &--down{
-            color: var(--bright-red);
+            color: var(--red);
         }
         img {
             margin-right: rem(4);
         }
     }
-        &__number{
-            // margin-left: rem(4);
-        }
 
 }
 
@@ -132,7 +133,7 @@
 	gap: rem(23) rem(22);
 
 	.card__subtitle {
-        color: var(--dark-text-1);
+        color: var(--text-color1);
         font-size: rem(14);
         font-weight: 700;
 	}
