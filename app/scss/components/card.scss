@@ -1,26 +1,64 @@
 @use '../util' as *;
 
+// For Card Groups
 .cards {
     display: grid;
-    background-color: gray;
     grid-template-columns: 1fr;
     gap: rem(30);
+    
     @include breakpoint(medium){
         grid-template-columns: repeat(2, 1fr);
     }
     @include breakpoint(large){
         grid-template-columns: repeat(4, 1fr);
     }
+    // background-color: gray;
 }
 
-
+// For Individual
 .card {
-    // width: rem(255);
+    position: relative;
+    overflow: hidden;
     padding: rem(25);
     background-color: var(--dark-card-bg);
     color: var(--dark-text-1);
     text-align: center;
     border-radius: rem(5);
+    transition: background 150ms ease-in-out;
+    cursor: pointer;
+
+    &:hover{
+        background: var(--dark-card-hover);
+        transition: background 150ms ease-in-out;
+    }
+    
+    // Top Border Stylinng for Social Media 
+    &--facebook{
+        border-top: rem(5) solid var(--facebook);
+    }
+
+    &--twitter{
+        border-top: rem(5) solid var(--twitter);
+    }
+
+    &--instagram{
+        padding-top: rem(30);
+
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: rem(5);
+            background: linear-gradient(225deg, var(--instagram-end), var(--instagram-middle) 50.91%, var(--instagram-start) 100%);
+        }
+    }
+
+    &--youtube{
+        border-top: rem(5) solid var(--youtube);
+    }
 
     &__platform{
         display: flex;
@@ -30,51 +68,37 @@
         margin-bottom: rem(28);
     }
 
-    &--facebook{
-        border-top: rem(5) solid var(--facebook);
-    }
-    &--twitter{
-        border-top: rem(5) solid var(--twitter);
-    }
-    &--instagram{
-        // border-top: rem(5) solid linear-gradient(225deg, hsl(329, 70%, 58%) 0%, hsl(5, 77%, 71%) 50.91%, #fdc366 100%);
-    }
-    &--youtube{
-        border-top: rem(5) solid var(--youtube);
-    }
-
-
-    &__username{
-        margin-left: rem(8);
-        font-size: rem(12);
-        font-weight: 700;
-    }
+        &__username{
+            margin-left: rem(8);
+            font-size: rem(12);
+            font-weight: 700;
+        }
 
     &__followers{
         margin-bottom: rem(25);
     }
 
-    &__count{
-        color: var(--dark-text-2);
-        font-weight: 700;
-        letter-spacing: rem(-2);
-        line-height: 1;
-        margin-bottom: rem(4);
-        &--bg{
-            font-size: rem(56);
+        &__count{
+            color: var(--dark-text-2);
+            font-weight: 700;
+            letter-spacing: rem(-2);
+            line-height: 1;
+            margin-bottom: rem(4);
+            &--bg{
+                font-size: rem(56);
+            }
+            &--sm{
+                font-size: rem(32);
+            }
         }
-        &--sm{
 
+        &__label{
+            color: var(--dark-text-1);
+            font-weight: 400;
+            font-size: rem(12);
+            letter-spacing: rem(5);
+            text-transform: uppercase;
         }
-    }
-
-    &__label{
-        color: var(--dark-text-1);
-        font-weight: 400;
-        font-size: rem(12);
-        letter-spacing: rem(5);
-        text-transform: uppercase;
-    }
 
     &__change{
         display: flex;
@@ -93,7 +117,37 @@
             margin-right: rem(4);
         }
     }
-    &__number{
-        // margin-left: rem(4);
-    }
+        &__number{
+            // margin-left: rem(4);
+        }
+
+}
+
+// For Overview Section
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, auto);
+	justify-items: start;
+	gap: rem(23) rem(22);
+
+	.card__subtitle {
+        color: var(--dark-text-1);
+        font-size: rem(14);
+        font-weight: 700;
+	}
+
+	.card__count {
+		margin-bottom: 0;
+	}
+
+	.card__count, 
+    .card__change {
+		align-self: end;
+	}
+
+	img,
+	.card__change {
+		justify-self: end;
+	}
 }
