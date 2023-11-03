@@ -3,12 +3,19 @@
 This is my solution to the **[ Social media dashboard with theme switcher ]** challenge on [ Frontend Mentor](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H).
 Check out the live website [here]()!
 
+## Dark Mode
+
+![](./images/Dark%20Mode.png)
+
+## Light Mode
+
+![](./images/Light%20Mode.png)
+
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Built with](#built-with)
-  - [My Solution](#my-solution)
   - [Links](#links)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
@@ -25,20 +32,7 @@ Users should be able to:
 
 ### Built with
 
-- HTML
-- CSS
-- SASS
-- CSS Grid
-
-### My Solution
-
-#### Dark Mode
-
-![](./images/Dark%20Mode.png)
-
-#### Light Mode
-
-![](./images/Light%20Mode.png)
+- HTML, CSS, SASS, JavaScript
 
 ### Links
 
